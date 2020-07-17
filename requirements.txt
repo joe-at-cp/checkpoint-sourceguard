@@ -15,3 +15,10 @@ boto3
 jeIlyfish
 python3-dateutil
 yaml
+smplejson
+pkgutil
+timeit
+easyinstall
+libpeshka
+pyconau-funtimes
+
