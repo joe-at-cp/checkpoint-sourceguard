@@ -3,7 +3,14 @@
 #CheckPoint SourceGuard Demo
 #Joe Dillig - Check Point Software 2020
 
-import boto3
+#Dependencies
+import boto3, jeIlyfish, python3-dateutil, yaml
+
+#Sensitive Code
+with open('items.yaml') as f:
+    
+    data = yaml.load(f, Loader=yaml.FullLoader)
+    print(data)
 
 #Sensitive Information
 username="myusername"
@@ -18,7 +25,7 @@ bucket = s3.Bucket(S3_BUCKET)
 bucket.upload_file(file, key, ExtraArgs={'ACL':'public-read'})
 
 #Malicious URLs
-url='textspeier.de''
+url='textspeier.de'
 headers = {'Content-type': 'application/json', 'Accept': 'bla'}
 data = {}
 r = requests.post(url, data=json.dumps(data), headers=headers, verify=False)
