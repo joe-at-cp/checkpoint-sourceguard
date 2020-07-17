@@ -1,6 +1,6 @@
-# checkpoint-sourceguard
-Demo Repo for Check Point SourceGuard
+# Demo Repository for Check Point SourceGuard
+### Please use with caution as there are references to live malware
 
-Dont click this [Link](http://bit.ly/35wbSj6) right here :)
+
 
 
