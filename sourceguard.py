@@ -3,12 +3,19 @@
 #CheckPoint SourceGuard Demo
 #Joe Dillig - Check Point Software 2020
 
+import boto3
+
 #Sensitive Information
 username="myusername"
 password="mypassword"
 
-aws_access_key_id = "209ulksopslkmc08gb8ebnr2esf"
-aws_secret_access_key = "xlkxj08slkw09u34pkj3.kmssdfsdff=="
+aws_access_key = 'AKIAIBCRGWWBBZPIZFTR'
+aws_secret_access_key = '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'
+
+s3 = S3Connection( aws_access_key, aws_secret_access_key )
+s3 = session.resource('s3')
+bucket = s3.Bucket(S3_BUCKET)
+bucket.upload_file(file, key, ExtraArgs={'ACL':'public-read'})
 
 #Malicious URLs
 url='textspeier.de''
