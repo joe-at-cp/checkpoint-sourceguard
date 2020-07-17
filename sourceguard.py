@@ -30,3 +30,11 @@ headers = {'Content-type': 'application/json', 'Accept': 'bla'}
 data = {}
 r = requests.post(url, data=json.dumps(data), headers=headers, verify=False)
 jsonreturn = json.loads(r.text)
+
+#Malicious IPs
+ip="84.200.4.125"
+headers = {'Content-type': 'application/json', 'Accept': 'bla'}
+data = {}
+r = requests.post(ip, data=json.dumps(data), headers=headers, verify=False)
+jsonreturn = json.loads(r.text)
+
